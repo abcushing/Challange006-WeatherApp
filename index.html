@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-md-12 dashboard">Weather Dashboard</div>
+    </div>
+    </br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+
+            <!-- serach city box -->
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Search for A City</label>
+                <input type="text" class="form-control" id="citySearch"></input>
+                <button id="submitCity" type="button" class="btn btn-primary">Submit</button>
+            </div>
+            <div id="cityButtons"></div>
+        </div>
+
+        <div class="col-md-7">
+            <!-- current weather box -->
+            <div class="card">
+                <div class="card-body">
+                    <h3><span id="currentCity" class="card-title currentWeatherTitle"></span>
+                        <span id="currentDate" class="currentWeatherTitle"></span>
+                    </h3>
+                    <p id=currentWeatherIcon></p>
+                    </br>
+                    <p><span id="currentTemp"> </span> </p>
+                    </br>
+                    <p><span id="currentWind"> </span>  </p>
+                    </br>
+                    <p><span id="currentHumidity"> </span> </p>
+                </div>
+            </div>
+            </br>
+            <!-- end current weather box -->
+            <!-- start forcast boxes -->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 id="0Date" class="card-title"></h5>
+                            <p>Later</p>
+                            <p id="0WeatherIcon"></p>
+                            </br>
+                            <p><span id="0Temp">Temp: </span> °F </p>
+                            </br>
+                            <p><span id="0Wind">Wind: </span> MPH </p>
+                            </br>
+                            <p><span id="0Humidity">Humidity: </span>%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 id="1Date" class="card-title"></h5>
+                            </br>
+                            <p><span id="1WeatherIcon"></span></p>
+                            </br>
+                            <p><span id="1Temp">Temp: </span> °F </p>
+                            </br>
+                            <p><span id="1Wind">Wind: </span> MPH </p>
+                            </br>
+                            <p><span id="1Humidity">Humidity: </span>% </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 id="2Date" class="card-title"></h5>
+                            </br>
+                            <p><span id="2WeatherIcon"></span></p>
+                            </br>
+                            <p><span id="2Temp">Temp: </span> °F </p>
+                            </br>
+                            <p><span id="2Wind">Wind: </span> MPH </p>
+                            </br>
+                            <p><span id="2Humidity">Humidity: </span>% </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 id="3Date" class="card-title"></h5>
+                            </br>
+                            <p><span id="3WeatherIcon"></span></p>
+                            </br>
+                            <p><span id="3Temp">Temp: </span> °F </p>
+                            </br>
+                            <p><span id="3Wind">Wind: </span> MPH </p>
+                            </br>
+                            <p><span id="3Humidity">Humidity: </span>% </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 id="4Date" class="card-title"></h5>
+                            </br>
+                            <p><span id="4WeatherIcon"></span></p>
+                            </br>
+                            <p><span id="4Temp">Temp: </span> °F </p>
+                            </br>
+                            <p><span id="4Wind">Wind: </span> MPH </p>
+                            </br>
+                            <p><span id="4Humidity">Humidity: </span>% </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 id="5Date" class="card-title"></h5>
+                            </br>
+                            <p><span id="5WeatherIcon"></span></p>
+                            </br>
+                            <p><span id="5Temp">Temp: </span> °F </p>
+                            </br>
+                            <p><span id="5Wind">Wind: </span> MPH </p>
+                            </br>
+                            <p><span id="5Humidity">Humidity: </span>% </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end forcast boxes -->
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
